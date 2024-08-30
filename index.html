@@ -19,7 +19,7 @@
         <link rel="next" href="applications/">
       
       
-        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.15">
     
     
@@ -28,10 +28,10 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" type="text/css" href="assets/stylesheets/main.7e359304.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/stylesheets/palette.06af60db.min.css">
       
       
   
@@ -86,12 +86,12 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" type="text/css" href="stylesheets/extra.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -100,7 +100,7 @@
     
     
     
-   <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet" type="text/css"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -148,7 +148,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="." title="Cubic Spline for TrueType Font" class="md-header__button md-logo" aria-label="Cubic Spline for TrueType Font" data-md-component="logo">
       
-  <img src="logo.png" alt="logo">
+  <img src="assets/images/logo1.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -207,7 +207,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="." title="Cubic Spline for TrueType Font" class="md-nav__button md-logo" aria-label="Cubic Spline for TrueType Font" data-md-component="logo">
       
-  <img src="logo.png" alt="logo">
+  <img src="assets/images/logo1.png" alt="logo">
 
     </a>
     Cubic Spline for TrueType Font
@@ -366,7 +366,7 @@ P(t)=(2P_0+m_0-2P_1+m_1)t^3+(-3P_0+3P_1-2m_0-m_1)t^2+m_0t+P_0, \hspace{0.3cm} 0 
 <h3 id="cubic-font-spline">Cubic font spline<a class="headerlink" href="#cubic-font-spline" title="Permanent link">¶</a></h3>
 <p><em>Cubic Font Spline</em> algorithmically creates control points for cubic Hermite spline from the outline of a TrueType font character defined by quadratic <em>Bézier</em> curves. The algorithm is carefully designed to guarantee the cubic Hermite spline curves generated from those control points look exactly the same as the original <em>Bézier</em> curves.</p>
 <h2 id="how-does-cubic-font-spline-work">How does cubic font spline work?<a class="headerlink" href="#how-does-cubic-font-spline-work" title="Permanent link">¶</a></h2>
-<p>The algorithm is implemented in C++ language as a dynamic link library. The library has a simple interface, and can be seasily integrated into other systems. The following code fragment shows what the library interface looks like.</p>
+<p>The algorithm is implemented in C++ language as a dynamic link library. The library has a simple interface, and can be seasily integrated into other systems. The following image shows what the library interface looks like.</p>
 <div class="highlight"><span class="filename">The Cubic Font Spline Library</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">CubicFontSpline</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">{</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">CUBICFONTSPLINELIBRARY_API</span><span class="w"> </span><span class="n">FontOutlineLib</span>
@@ -376,6 +376,10 @@ P(t)=(2P_0+m_0-2P_1+m_1)t^3+(-3P_0+3P_1-2m_0-m_1)t^2+m_0t+P_0, \hspace{0.3cm} 0 
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="p">};</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">}</span>
 </code></pre></div>
+<figure>
+  <a class="glightbox" href="assets/images/Library-Interface.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Cubic Font Library Interface" src="assets/images/Library-Interface.png"></a>
+  <figcaption>Fig. 1 Font Library Interface (click to enlarge)</figcaption>
+</figure>
 <p>The parameter <em>c</em> holds the Unicode value of the character who's control point data are to be extracted, and <em>strFontFileName</em> holds the TrueType font file name. The return value of type <em>FontOutlineV</em> of the function holds the control points of the generated cubic Hermite splines.</p>
 <h2 id="how-well-does-it-perform">How well Does it perform?<a class="headerlink" href="#how-well-does-it-perform" title="Permanent link">¶</a></h2>
 <p>Performance analyses were carried out both in terms of runtime efficiency and degree of congruity between the two categories of splines.</p>
@@ -526,31 +530,31 @@ P(t)=(2P_0+m_0-2P_1+m_1)t^3+(-3P_0+3P_1-2m_0-m_1)t^2+m_0t+P_0, \hspace{0.3cm} 0 
 </tr>
 </tbody>
 </table>
-<p>Total of 10 font faces of various languages were used in the test. Performance varies from character to character affected by the number of control points a character has. Fig. 1 shows the relationship between average number of control points and the generation time.</p>
+<p>Total of 10 font faces of various languages were used in the test. Performance varies from character to character affected by the number of control points a character has. Fig. 2 shows the relationship between average number of control points and the generation time.</p>
 <figure>
   <a class="glightbox" href="assets/images/algorithm-performance.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Performance" src="assets/images/algorithm-performance.png" width="460"></a>
-  <figcaption>Fig.1 Runtime Performance Of The Algorithm(click to enlarge)</figcaption>
+  <figcaption>Fig.2 Runtime Performance Of The Algorithm(click to enlarge)</figcaption>
 </figure>
 <p>Tests were carried out on an old platform with an Intel Core i7-10875H CPU running at 2.30GHz. Code was compiled against <em>Microsoft C++</em> compiler version 19.39.33523.</p>
 <h3 id="2-degree-of-congruity">2. Degree of congruity<a class="headerlink" href="#2-degree-of-congruity" title="Permanent link">¶</a></h3>
 <p>Degree of congruity can be measured both objectively and subjectively. Subjective method is adopted. To evaluate the resemblance between the two categories of splines, visual resprentation of the cubic splines has to be created.</p>
 <h4 id="visualization-of-the-cubic-hermite-splines">Visualization of the cubic Hermite splines<a class="headerlink" href="#visualization-of-the-cubic-hermite-splines" title="Permanent link">¶</a></h4>
-<p>An Unreal Engine editor plugin was developed to visualize the spline curves. Fig. 2 shows a screen shot of the editor with cubic splines of a chinese character rendered.</p>
+<p>An Unreal Engine editor plugin was developed to visualize the spline curves. Fig. 3 shows a screen shot of the editor with cubic splines of a chinese character rendered.</p>
 <figure>
   <a class="glightbox" href="assets/images/editor-UI.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Font Spline Editor UI" src="assets/images/editor-UI.png" width="600"></a>
-  <figcaption>Fig. 2 Unreal Engine Editor Plugin For Qubic Hermite Splines (click to enlarge)</figcaption>
+  <figcaption>Fig. 3 Unreal Engine Editor Plugin For Qubic Hermite Splines (click to enlarge)</figcaption>
 </figure>
 <p>The rendered curves depict the Chinese character for the word "spring". Control points are shown along with the curves. The coordinate system is drawn to give a hint of how the character was made by the font face manufacturer.</p>
 <h4 id="congruity-between-the-two-categories-of-splines">Congruity between the two categories of splines<a class="headerlink" href="#congruity-between-the-two-categories-of-splines" title="Permanent link">¶</a></h4>
-<p>The method of checking the degree of visual resemblance between the two types of splines is straight forward. A set of randomly selected characters are rendered with the editor and the operating system respectively. The resulting images are processed and stacked on top of each other as shown in Fig. 3. So far, no obvious visual discrepancy between the two algorithms can be observed. All the tests were performed on <em>Microsoft Windows</em>, and the images were processed with <em>GIMP</em>.</p>
+<p>The method of checking the degree of visual resemblance between the two types of splines is straight forward. A set of randomly selected characters are rendered with the editor and the operating system respectively. The resulting images are processed and stacked on top of each other as shown in Fig. 4. So far, no obvious visual discrepancy between the two algorithms can be observed. All the tests were performed on <em>Microsoft Windows</em>, and the images were processed with <em>GIMP</em>.</p>
 <figure>
   <a class="glightbox" href="assets/images/spline-comparison.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Algorithm Comparison" src="assets/images/spline-comparison.png" width="360"></a>
-  <figcaption>Fig.3 Quadratic Bézier curves (in blue color) and cubic Hermite splines (in orange color) comparison (click to enlarge)</figcaption>
+  <figcaption>Fig.4 Quadratic Bézier curves (in blue color) and cubic Hermite splines (in orange color) comparison (click to enlarge)</figcaption>
 </figure>
-<p>The rendering result of the <em>Bézier</em> curves and control points of the character "春" is shown below in Fig. 4 for comparison reasons. It was rendered with <em>Microsoft Excel</em>.</p>
+<p>The rendering result of the <em>Bézier</em> curves and control points of the character "春" is shown below in Fig. 5 for comparison reasons. It was rendered with <em>Microsoft Excel</em>.</p>
 <figure>
   <a class="glightbox" href="assets/images/font-outline-and-rendering.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Bézier Curves" src="assets/images/font-outline-and-rendering.png" width="360"></a>
-  <figcaption>Fig.4 Control Points of Bézier Curves (click to enlarge)</figcaption>
+  <figcaption>Fig. 5 Control Points of Bézier Curves (click to enlarge)</figcaption>
 </figure></div>
 
 
