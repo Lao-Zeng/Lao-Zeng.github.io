@@ -18,8 +18,8 @@
       
         <link rel="next" href="applications/">
       
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
       
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.15">
     
     
@@ -367,14 +367,14 @@ P(t)=(2P_0+m_0-2P_1+m_1)t^3+(-3P_0+3P_1-2m_0-m_1)t^2+m_0t+P_0, \hspace{0.3cm} 0 
 <p><em>Cubic Font Spline</em> algorithmically creates control points for cubic Hermite spline from the outline of a TrueType font character defined by quadratic <em>Bézier</em> curves. The algorithm is carefully designed to guarantee the cubic Hermite spline curves generated from those control points look exactly the same as the original <em>Bézier</em> curves.</p>
 <h2 id="how-does-cubic-font-spline-work">How does cubic font spline work?<a class="headerlink" href="#how-does-cubic-font-spline-work" title="Permanent link">¶</a></h2>
 <p>The algorithm is implemented in C++ language as a dynamic link library. The library has a simple interface, and can be seasily integrated into other systems. The following code fragment shows what the library interface looks like.</p>
-<div class="highlight"><span class="filename">The Cubic Font Spline Library</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos="1 "></span></a><span class="k">namespace</span><span class="w"> </span><span class="nn">CubicFontSpline</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><a href="#__codelineno-0-2"><span class="linenos" data-linenos="2 "></span></a><span class="p">{</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><a href="#__codelineno-0-3"><span class="linenos" data-linenos="3 "></span></a><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">CUBICFONTSPLINELIBRARY_API</span><span class="w"> </span><span class="n">FontOutlineLib</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><a href="#__codelineno-0-4"><span class="linenos" data-linenos="4 "></span></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><a href="#__codelineno-0-5"><span class="linenos" data-linenos="5 "></span></a><span class="w">    </span><span class="k">public</span><span class="o">:</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><a href="#__codelineno-0-6"><span class="linenos" data-linenos="6 "></span></a><span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">FontOutlineV</span><span class="o">&gt;</span><span class="w"> </span><span class="n">GetSplines</span><span class="p">(</span><span class="kt">wchar_t</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">strFontFileName</span><span class="p">);</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><a href="#__codelineno-0-7"><span class="linenos" data-linenos="7 "></span></a><span class="w">    </span><span class="p">};</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><a href="#__codelineno-0-8"><span class="linenos" data-linenos="8 "></span></a><span class="p">}</span>
+<div class="highlight"><span class="filename">The Cubic Font Spline Library</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">CubicFontSpline</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">CUBICFONTSPLINELIBRARY_API</span><span class="w"> </span><span class="n">FontOutlineLib</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">FontOutlineV</span><span class="o">&gt;</span><span class="w"> </span><span class="n">GetSplines</span><span class="p">(</span><span class="kt">wchar_t</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">strFontFileName</span><span class="p">);</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="p">};</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">}</span>
 </code></pre></div>
 <p>The parameter <em>c</em> holds the Unicode value of the character who's control point data are to be extracted, and <em>strFontFileName</em> holds the TrueType font file name. The return value of type <em>FontOutlineV</em> of the function holds the control points of the generated cubic Hermite splines.</p>
 <h2 id="how-well-does-it-perform">How well Does it perform?<a class="headerlink" href="#how-well-does-it-perform" title="Permanent link">¶</a></h2>
