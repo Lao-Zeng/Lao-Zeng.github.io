@@ -2,7 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>http://localhost:9999/</loc>
-         <lastmod>2024-08-18</lastmod>
+         <lastmod>2024-08-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://localhost:9999/applications/</loc>
+         <lastmod>2024-08-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://localhost:9999/architecture/</loc>
+         <lastmod>2024-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
