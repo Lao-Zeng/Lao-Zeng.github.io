@@ -12,26 +12,24 @@
         <meta name="author" content="老曾">
       
       
-        <link rel="canonical" href="https://lao-zeng.github.io/applications/">
-      
-      
-        <link rel="prev" href="..">
+        <link rel="canonical" href="https://lao-zeng.github.io/architecture/">
       
       
       
-      <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+      
+      <link rel="icon" href="../favicon.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.15">
     
     
       
-        <title>Applications - Cubic Spline for TrueType Font</title>
+        <title>Architecture - Cubic Spline for TrueType Font</title>
       
     
     
-      <link rel=“stylesheet” type=“text/css” href="../assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e359304.min.css">
       
         
-        <link rel=“stylesheet” type=“text/css” href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
   
@@ -86,12 +84,12 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel=“stylesheet” type=“text/css” href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-      <link rel=“stylesheet” type=“text/css” href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -100,7 +98,7 @@
     
     
     
-   <link href="../assets/stylesheets/glightbox.min.css" rel=“stylesheet” type=“text/css”/><style>
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -126,7 +124,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#possible-applications-of-the-algorithm" class="md-skip">
+        <a href="#software-architecture" class="md-skip">
           Skip to content
         </a>
       
@@ -165,7 +163,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Applications
+              Architecture
             
           </span>
         </div>
@@ -239,28 +237,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Applications
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../applications/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -269,35 +249,6 @@
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#possible-applications-of-the-algorithm" class="md-nav__link">
-    <span class="md-ellipsis">
-      Possible applications of the algorithm
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -317,36 +268,118 @@
                   
 
 
-  <h1>Applications</h1>
+  <h1>Architecture</h1>
 
-<div><h2 id="possible-applications-of-the-algorithm">Possible applications of the algorithm<a class="headerlink" href="#possible-applications-of-the-algorithm" title="Permanent link">¶</a></h2>
-<p>Cubic Hermite splines are widely used in computer graphics related softwares. If outlines of characters can be defined by cubic Hermite splines, accumulated power of resources from the well established TrueType font industry can be released to a much wider field of applications.</p>
-<p>A number of features have been added to the editor during the time it was developed to demonstrate potential usage of the algorithm.</p>
-<h3 id="generation-of-blueprint-actor-template">Generation of blueprint actor template<a class="headerlink" href="#generation-of-blueprint-actor-template" title="Permanent link">¶</a></h3>
-<p>Algorithmically generated splines of a character of any TrueType font face can be used to programmatically create a blueprint actor template by the editor. Fig. 1 shows the UE blueprint editor with a created template opened. As can be seen in the image, the template is configured with 4 USplineComponent instances and each of them is initialized with control points generated by the algorithm. Every USplineComponent instance can be manually edited and serialized for later use. </p>
-<figure>
-  <a class="glightbox" href="../assets/images/blueprint-template.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="blueprint template" src="../assets/images/blueprint-template.png" width="600"></a>
-  <figcaption>Fig. 1 Programmatically Generated Blueprint Template (click to enlarge)</figcaption>
-</figure>
-<h3 id="spline-meshes">Spline Meshes<a class="headerlink" href="#spline-meshes" title="Permanent link">¶</a></h3>
-<p>A powerful feature of Unreal Engine is to make static mesh follow splines by using the <em>USplineMeshComponent</em> component. If the splines are created from a TrueType font face, interesting 3D objects can be built within seconds. Fig. 2 shows an example of neon light objects built with font splines and <em>USplineMeshComponent</em>.</p>
-<figure>
-  <a class="glightbox" href="../assets/images/neon-lights.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="neon-lights" src="../assets/images/neon-lights.png" width="600"></a>
-  <figcaption>Fig. 2 Neon Lights Created from Splines, Static Meshes, and Emissive Materials (click to enlarge)</figcaption>
-</figure>
-<h3 id="visual-effects">Visual Effects<a class="headerlink" href="#visual-effects" title="Permanent link">¶</a></h3>
-<p>Font splines can be used to define paths in 3D scenes. A typical usage of paths is to guide particle movement when constructing visual effects in a game. The following image shows fluid driven by particle animation flowing along spline paths in Unreal Engine.</p>
-<figure>
-  <a class="glightbox" href="../assets/images/FluidAlongPaths.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="FluidAlongPaths" src="../assets/images/FluidAlongPaths.png" width="600"></a>
-  <figcaption>Fig. 3 Fluid Flowing Along Paths (click to enlarge)</figcaption>
-</figure>
-<h3 id="procedural-content-generation">Procedural Content Generation<a class="headerlink" href="#procedural-content-generation" title="Permanent link">¶</a></h3>
-<p>Cubic font splines can also be used as PCG guide lines to generate landscape or decorated areas illustrated below.</p>
-<p><a class="glightbox" href="../assets/images/spring-PCG-side-view.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="left" alt="PCG Guide Line Side View" src="../assets/images/spring-PCG-side-view.png" width="460,"></a></p>
-<p><a class="glightbox" href="../assets/images/spring-PCG-over-view.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="center" alt="PCG Guide Line Top View" src="../assets/images/spring-PCG-over-view.png" width="460,"></a></p>
-<figure>
-<figcaption>Fig. 4 PCG with TrueType Font Splines. (click to enlarge)</figcaption>
-</figure></div>
+<div><h2 id="software-architecture">Software Architecture<a class="headerlink" href="#software-architecture" title="Permanent link">¶</a></h2>
+<p>The software comprises two modules, the <em>CubicFontSplineData</em> module and the <em>FontSplineEditor</em> module. Conceptural architecture of the software is shown in the following diagram.</p>
+<pre class="mermaid"><code>C4Component
+  title Conceptural Software Architecture
+
+  Container(cubicFontSplineData, "Cubic Font Spline Data", "3rd Party Plugin", "Extracts font outline and generates cubic spline control points.")
+  Container(fontSplineEditor, "Font Spline Editor", "Editor Plugin", "Draws splines in a widget window and shows properties of generated splines.")
+
+  Container_Boundary(bundle, "Cubic Hermite Spline for TrueType Font")
+  {
+    Component(blueprintFactory, "Blueprint Asset Factory", "C++, Unreal Engine", "Creates various blueprint templates.")
+    Component(data, "Cubic Spline Data", "C++, Unreal Engine", "Provides cubic spline control points data.")
+    Component(detailsPanel, "Property Customization", "C++, Unreal Engine", "Customizes view of properties of spline data.")
+    Component(assetEditor, "Spline Data Asset Editor", "C++, Unreal Engine", "Unreal Engine editor widget.")
+
+    Rel(detailsPanel, data, "Uses")
+    Rel(assetEditor, detailsPanel, "Uses")
+    Rel(data, blueprintFactory, "Uses")
+  }
+
+  Rel(cubicFontSplineData, data, "Uses")
+  Rel(fontSplineEditor, data, "Uses")
+  Rel(fontSplineEditor, detailsPanel, "Uses")
+  Rel(fontSplineEditor, assetEditor, "Uses")
+</code></pre>
+<p>Diagram 1. Conceptural Software Architecture</p>
+<h3 id="cubicfontsplinedata-module">CubicFontSplineData Module<a class="headerlink" href="#cubicfontsplinedata-module" title="Permanent link">¶</a></h3>
+<p>The cubic Hermite spline generation algorithm is implemented in C++ language and provided as a dynamic link library (dll). To demonstrate possible applications of the algorithm, a third party library plugin of Unreal Engine is created from the dll. The dll interface looks like the following.</p>
+<div class="highlight"><span class="filename">The outline generation library</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos="1 "></span></a><span class="k">namespace</span><span class="w"> </span><span class="nn">CubicFontSpline</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><a href="#__codelineno-0-2"><span class="linenos" data-linenos="2 "></span></a><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><a href="#__codelineno-0-3"><span class="linenos" data-linenos="3 "></span></a><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">CUBICFONTSPLINELIBRARY_API</span><span class="w"> </span><span class="n">FontOutlineLib</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><a href="#__codelineno-0-4"><span class="linenos" data-linenos="4 "></span></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><a href="#__codelineno-0-5"><span class="linenos" data-linenos="5 "></span></a><span class="w">    </span><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><a href="#__codelineno-0-6"><span class="linenos" data-linenos="6 "></span></a><span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">FontOutlineV</span><span class="o">&gt;</span><span class="w"> </span><span class="n">GetSplines</span><span class="p">(</span><span class="kt">wchar_t</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">pBuffer</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">bufferSize</span><span class="p">);</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><a href="#__codelineno-0-7"><span class="linenos" data-linenos="7 "></span></a><span class="w">    </span><span class="p">};</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><a href="#__codelineno-0-8"><span class="linenos" data-linenos="8 "></span></a><span class="p">}</span>
+</code></pre></div>
+<p>Pointer pBuffer points to a memory buffer where TrueType font file is loaded in Unreal Engine. When the library is called, it extracts outline data of the character specified by variable <em>c</em> and generates cubic splines from them. The conceptural structure of the library is shown below.</p>
+<pre class="mermaid"><code>---
+title: Cubic Hermite Spline for TrueType Algorithm
+---
+classDiagram
+  CubicSplineGenerator *-- OutlineExtractor
+  CubicSplineGenerator ..&gt; FontOutlineV
+  OutlineExtractor *-- FreeTypeFace
+  class CubicSplineGenerator {
+    +GetSpline(wchar_t c, const unsigned char* pBuffer, int bufferSize) FontOutlineV*
+  }
+  class OutlineExtractor {
+    +GetOutline() FontOutline*
+    -ExtractOutline()
+    -ComputeViewBox()
+  }
+  class FreeTypeFace {
+    +CreateFromFileName()
+    +CreateFromBuffer()
+    +FT_Face m_face
+    -FT_Library m_ftLibrary
+  }
+  class FontOutlineV {
+    +int m_nXMin;
+    +int m_nYMin;
+    +int m_nWidth;
+    +int m_nHeight;
+    +vector~vector~FontPointF~~ Splines;
+  }
+</code></pre>
+<p>Diagram 2. Conceptural Structure of The Library</p>
+<h3 id="fontsplineeditor-module">FontSplineEditor Module<a class="headerlink" href="#fontsplineeditor-module" title="Permanent link">¶</a></h3>
+<p>This module is designed to build a bridge between the algorithm and developers and artists. It can be used to easily create a blueprint template embedded with instances of USplineComponent where spline data are held. </p>
+<h4 id="blueprint-template-factories">Blueprint Template Factories<a class="headerlink" href="#blueprint-template-factories" title="Permanent link">¶</a></h4>
+<p>To make life easier, a number of ready-to-use example templates are provided along with the module. They are managed by corresponding factories and provide a starting point for working with the generated splines. The following diagram shows the conceptual sturcture of the factories.</p>
+<pre class="mermaid"><code>---
+title: Blueprint Template Factory
+---
+classDiagram
+  BlueprintFactoryBase &lt;|-- BlueprintFactory
+  BlueprintFactoryBase &lt;|-- BlueprintNiagraFactory
+  BlueprintFactoryBase &lt;|-- BlueprintPCGFactory
+  BlueprintFactoryBase &lt;|-- BlueprintSplineMeshFactory
+  BlueprintFactoryManger o-- BlueprintFactoryBase
+  class BlueprintFactoryBase {
+    +CreateBlueprint(FString ClassName) UBlueprint*
+    -CreateBlueprintPackage(TSubclassOf~AActor~ ChildClass) UBlueprint*
+    -AddSplineComponents(UBlueprint* Blueprint)
+    -AddNiagaraComponents(UBlueprint* Blueprint, UNiagaraSystem* NiagaraSystem)
+    -AddNiagaraComponents(UBlueprint* Blueprint, UNiagaraSystem* NiagaraSystem)
+    -AddPCGComponent(UBlueprint* Blueprint, UPCGGraphInterface* Graph)
+  }
+  class BlueprintFactoryManger {
+    +GetFactory(EBlueprintClassType blueprintType) FBlueprintFactoryBase*
+    -TMap~EBlueprintClassType, FBlueprintFactoryBase*~ FactoryTable;
+  }
+</code></pre>
+<p>Diagram 3. Blueprint Template Factory</p>
+<h4 id="user-interface">User Interface<a class="headerlink" href="#user-interface" title="Permanent link">¶</a></h4>
+<p>Functionality of the software is implemented in a custom asset called UFontSplineDataObject. A dedicated editor was developed to serve as user interface through extending the Unreal Engine editor.</p>
+<pre class="mermaid"><code>---
+title: Custom Asset Editor for Spline Data
+---
+classDiagram
+  FontSplineDataEditorToolkit o-- FontSplineDataObject
+  FontSplineDataEditorToolkit ..&gt; SplineMeshActorDetails
+  FontSplineDataEditorToolkit ..&gt; FontSplineDataObjectDetails
+  FontSplineDataEditorToolkit ..&gt; FontSplineDataWidget
+  FontSplineDataAssetTypeActions ..&gt; FontSplineDataEditorToolkit
+  FontSplineDataAssetTypeActions ..&gt; FontSplineDataObject
+  FontSplineDataObject &lt;.. FontSplineDataObjectFactory
+</code></pre>
+<p>Diagram 4. User Interface</p></div>
 
 
 
